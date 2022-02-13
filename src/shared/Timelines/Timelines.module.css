@@ -1,0 +1,13 @@
+.title {
+  margin-top: 0;
+}
+
+.container {
+  border-left: 2px solid #dadada;
+  padding: 8px 0 8px 48px;
+}
+
+.container > div {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
