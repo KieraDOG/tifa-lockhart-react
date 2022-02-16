@@ -1,8 +1,8 @@
-.navbar {
+.wrapper {
   display: flex;
 }
 
-.navbar__item {
+.item {
   padding: 16px;
   text-decoration: none;
   color: #49515d;
@@ -12,7 +12,7 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.navbar__item::after {
+.item::after {
   content: "";  
   width: 0;
   border-bottom: 3px solid #377e9a;
@@ -22,16 +22,16 @@
   transition: width 0.3s ease-in-out;
 }
 
-.navbar__item--active,
-.navbar__item:hover {
+.activeItem,
+.item:hover {
   opacity: 1;
 }
 
-.navbar__item--active::after,
-.navbar__item:hover::after {
+.activeItem::after,
+.item:hover::after {
   width: 24px;
 }
 
-.navbar__item:last-of-type {
+.item:last-of-type {
   padding-right: 0;
 }

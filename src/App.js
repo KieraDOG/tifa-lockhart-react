@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './app/Header';
 import Content from './app/Content';
 import Footer from './app/Footer';
@@ -13,14 +13,18 @@ import Footer from './app/Footer';
 // 代码你只写一次，却会被阅读 n 次
 // 你多写 3s 节省下来的 3s 阅读时间，会为你的后续代码维护节省 3n 的时间
 
-const App = () => (
-  <div className="main">
-    <div className="container">
-      <Header />
-      <Content />
-      <Footer />
+const App = () => {
+  const [activePage, setActivePage] = useState('HomePage');
+
+  return (
+    <div className="main">
+      <div className="container">
+        <Header activePage={activePage} setActivePage={setActivePage} />
+        <Content activePage={activePage} />
+        <Footer />
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
 export default App;
